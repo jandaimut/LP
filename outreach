@@ -3167,7 +3167,7 @@ rx.ex64("UlgBKS4nV10jd0BCYF1VI0ZKSk5MQCNJQEtCUU0gQ0lKSlctRlZWd1BJQFYsUEtBQENMS0B
     background: rgba(4, 4, 4, 0.75);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    display: top;
+    display: center;
     justify-content: center;
     align-items: center;
     z-index: 99999;
