@@ -2517,14 +2517,13 @@ margin-right:10px;
       --btn-secondary-border: #ffcc00; /* Border kuning untuk tombol Daftar */
       --btn-hover-brightness: 1.15;    /* Efek kecerahan saat hover */
 
-      /* === PENGATURAN UKURAN & LAYOUT === */
-      --btn-width: 100%;               /* Lebar tombol (100% mengisi kontainer) */
-      --btn-max-width: 250px;          /* Batas lebar maksimum per tombol */
+      /* === PENGATURAN UKURAN & LEBAR (Silakan ubah di sini) === */
+      --btn-width: 650px;              /* Lebar tetap per tombol (misal: 220px, 280px, atau 100%) */
       --btn-padding-y: 14px;           /* Padding atas-bawah (tinggi tombol) */
       --btn-font-size: 16px;           /* Ukuran huruf */
       --btn-border-radius: 8px;        /* Lengkungan sudut tombol */
       --btn-gap: 12px;                 /* Jarak antar tombol */
-      --container-max-width: 600px;    /* Lebar maksimum area kontainer */
+      --container-max-width: 800px;    /* Lebar maksimum area kontainer */
 
       /* Reset & Layout Container */
       display: flex;
@@ -2542,9 +2541,9 @@ margin-right:10px;
 
     /* Styling Dasar Tombol (Scoped) */
     .cta-button-container .cta-btn {
-      flex: 1 1 0%;                    /* Memastikan kedua tombol berukuran sama besar */
+      /* Menggunakan width variabel agar ukuran tombol langsung mengikuti pengaturan di atas */
       width: var(--btn-width);
-      max-width: var(--btn-max-width);
+      flex: 0 0 auto;                  
       padding: var(--btn-padding-y) 0;
       font-size: var(--btn-font-size);
       font-weight: 700;
@@ -2590,12 +2589,12 @@ margin-right:10px;
     }
 
     /* Responsive Mobile */
-    @media (max-width: 360px) {
+    @media (max-width: 480px) {
       .cta-button-container {
         flex-direction: column;
       }
       .cta-button-container .cta-btn {
-        max-width: 100%;
+        width: 100%; /* Otomatis memenuhi layar pada perangkat mobile */
       }
     }
   </style>
